@@ -1,0 +1,100 @@
+text,is_malicious
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"Check out my new profile on http://google.com it's great",False
+"You have won a prize! Claim it now at http://example.test/prize",True
+"Here is the document you requested: https://docs.google.com/spreadsheets/d/12345",False
+"URGENT: Your account is locked. Please verify at http://simulate_malicious.com/unlock",True
+"This is a known good site: https://github.com",False
+"Don't click this, it's a phish-test link: http://phish-test.org",True
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False
+"I found a cool article at https://en.wikipedia.org/wiki/Main_Page",False

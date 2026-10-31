@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | EmotiSense</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-orbs"><span></span></div>
+
+  <main class="auth-shell">
+    <div class="auth-grid">
+      <section class="auth-showcase reveal in-view">
+        <div class="auth-brand">
+          <div class="auth-brand-mark pulse-ring">E</div>
+          <div class="auth-brand-copy">
+            <div class="auth-brand-name">EmotiSense</div>
+            <div class="brand-sub">Feel the feed. Understand the vibe.</div>
+          </div>
+        </div>
+
+        <span class="auth-kicker">Modern social UI</span>
+        <h1 class="auth-title">Login to your smarter, cleaner, more expressive feed.</h1>
+        <p class="auth-copy">A more premium visual system, smooth motion, and sentiment-aware experience from the first screen onward.</p>
+
+        <div class="auth-stats">
+          <div class="auth-stat"><strong>AI</strong><span class="muted-small">Sentiment checks</span></div>
+          <div class="auth-stat"><strong>Safe</strong><span class="muted-small">Cleaner interactions</span></div>
+          <div class="auth-stat"><strong>Fast</strong><span class="muted-small">Responsive flow</span></div>
+        </div>
+      </section>
+
+      <section class="auth-panel reveal" style="--delay:.08s;">
+        <div class="auth-foot">
+          <div>
+            <h2>Welcome back</h2>
+            <p class="auth-subtitle">Sign in to continue your experience.</p>
+          </div>
+          <button class="btn-icon" data-mode-toggle>🌙</button>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="flash-wrap">
+              {% for cat, msg in messages %}
+                <div class="flash {{ cat }}">{{ msg }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('login') }}" class="auth-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          </div>
+
+          <div class="auth-actions">
+            <button type="submit" class="auth-btn">Login</button>
+          </div>
+        </form>
+
+        <div class="extra-links">
+          Don’t have an account? <a href="{{ url_for('signup') }}">Create one</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

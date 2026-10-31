@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="navbar reveal in-view">
+  <div class="nav-container">
+    <div class="brand">
+      <div class="brand-mark pulse-ring">E</div>
+      <div class="brand-copy">
+        <span>EmotiSense</span>
+        <span class="brand-sub">Community profile view</span>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      {% if session.get('username') %}
+        <a href="{{ url_for('feed') }}" class="nav-link">Home</a>
+        <a href="{{ url_for('profile') }}" class="nav-link">Profile</a>
+        <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+        <button class="btn-icon" id="mode-toggle" data-mode-toggle>🌙</button>
+        <a href="{{ url_for('profile') }}" class="user-avatar-link">
+          <div class="avatar-sm">{{ session.get('username')[0]|upper }}</div>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="profile-layout">
+  <section class="profile-section">
+    <div class="profile-header reveal">
+      <div class="profile-avatar floaty">{{ target_user.username[0]|upper }}</div>
+      <h2 class="profile-username">{{ target_user.username }}</h2>
+      <p class="muted profile-bio">{{ target_user.bio or 'This user has not set a bio yet.' }}</p>
+    </div>
+
+    <div class="card user-details-card reveal" style="--delay:.06s;">
+      <div class="details-grid">
+        <div class="detail-item">
+          <span class="detail-label">Birthday</span>
+          <span class="detail-value">{{ target_user.birthday if target_user.birthday else "Not Set" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Gender</span>
+          <span class="detail-value">{{ target_user.gender if target_user.gender else "Not Set" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Relationship</span>
+          <span class="detail-value">{{ target_user.relationship_status if target_user.relationship_status else "Not Set" }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Profile vibe</span>
+          <span class="detail-value">Public community view</span>
+        </div>
+      </div>
+      {% if viewing_user.clear_mode %}
+      <p class="muted-small clear-mode-notice">Some posts may be hidden because your Clear Mode is active.</p>
+      {% endif %}
+    </div>
+
+    <h3 class="section-title reveal" style="--delay:.1s;">Posts by {{ target_user.username }} ({{ posts|length }})</h3>
+
+    {% for post in posts %}
+    <article class="card feed-post reveal" id="post-{{ post.id }}" data-post-id="{{ post.id }}" style="--delay: {{ (loop.index * 0.05) + 0.12 }}s;">
+      <div class="post-head">
+        <div class="avatar-md">{{ post.author.username[0]|upper if post.author else 'U' }}</div>
+        <div class="meta">
+          <div class="author">{{ post.author.username if post.author else 'User' }}</div>
+          <div class="time">{{ post.created_at|humantime }}</div>
+        </div>
+        <div class="post-actions">
+          <div class="badge sentiment-badge {{ post.sentiment }}">
+            {% if post.sentiment == 'positive' %}😊{% elif post.sentiment == 'neutral' %}😐{% else %}😠{% endif %}
+            <span>{{ post.sentiment|capitalize }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-body">{{ post.caption }}</div>
+
+      {% if post.image_path %}
+      <div class="post-img-wrapper">
+        <img src="{{ url_for('static', filename='uploads/' ~ post.image_path) }}" class="post-image" alt="Post image">
+      </div>
+      {% endif %}
+
+      <div class="comments-section">
+        <h4 class="comments-title">Comments ({{ comments|selectattr('post_id', 'equalto', post.id)|list|length }})</h4>
+        <ul class="comments-list">
+          {% for c in comments if c.post_id == post.id %}
+          <li class="comment" id="comment-{{ c.id }}" data-comment-id="{{ c.id }}">
+            <div class="comment-content">
+              <a href="{{ url_for('view_profile', username=c.author.username) }}" class="comment-author-link">
+                <div class="avatar-sm">{{ c.author.username[0]|upper if c.author else 'U' }}</div>
+              </a>
+              <div class="right">
+                <div class="text">
+                  <a href="{{ url_for('view_profile', username=c.author.username) }}" class="comment-author-link">
+                    <strong>{{ c.author.username if c.author else 'User' }}</strong>
+                  </a>
+                  <span>{{ c.text }}</span>
+                </div>
+                <div class="meta-row" style="margin-top:10px;">
+                  <div class="badge small sentiment-badge {{ c.sentiment }}">
+                    {% if c.sentiment == 'positive' %}😊{% elif c.sentiment == 'neutral' %}😐{% else %}😠{% endif %}
+                    <span>{{ c.sentiment|capitalize }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="comment-prompt">You can join the conversation from the <a href="{{ url_for('feed') }}" class="btn-text">Home Feed</a>.</div>
+      </div>
+    </article>
+    {% else %}
+    <div class="card empty-state reveal">
+      <h3 class="card-title">No posts yet</h3>
+      <p class="muted">{{ target_user.username }} has not posted anything yet.</p>
+    </div>
+    {% endfor %}
+  </section>
+</div>
+
+{% endblock %}
